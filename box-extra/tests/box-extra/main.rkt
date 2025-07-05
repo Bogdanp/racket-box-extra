@@ -22,7 +22,7 @@
       thread-wait
       (for/list ([_ (in-range m)])
         (thread
-         (λ ()
+         (lambda ()
            (for ([_ (in-range n)])
              (update! proc)))))))
     (check-equal? (unbox b) expected))
